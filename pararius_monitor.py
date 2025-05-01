@@ -208,3 +208,4 @@ if __name__ == "__main__":
     check_interval = int(os.environ.get("CHECK_INTERVAL", "900"))
     monitor = ParariusMonitor(search_url, check_interval=check_interval)
     monitor.run()
+    #inshallah
