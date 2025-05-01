@@ -165,7 +165,7 @@ class FundaMonitor:
                 return False
             
             client = Client(self.twilio_account_sid, self.twilio_auth_token)
-            message = f"New Funda listing\n\n{listing['title']}\n{listing['price']}\nLocation: {listing['address']}\nURL: {listing['url']}"
+            message = f"NFL\n\n{listing['title']}\n{listing['price']}\n{listing['address']}\nL{listing['url']}"
             
             self.logger.info(f"Sending notification to {self.notification_number} for Funda listing: {listing['title']}")
             
