@@ -153,7 +153,7 @@ class ParariusMonitor:
                 return False
             
             client = Client(self.twilio_account_sid, self.twilio_auth_token)
-            message = f"N listing\n\n{listing['title']}\n{listing['price']}\n\L: {listing['url']}"
+            message = f"N listing\n\n{listing['title']}\n{listing['price']}\nL: {listing['url']}"
             
             self.logger.info(f"Sending notification to {self.notification_number} for listing: {listing['title']}")
             
@@ -171,7 +171,7 @@ class ParariusMonitor:
             return False
     
     def run(self):
-        self.logger.info(f"Starting Pararius monitor for {self.search_url}")
+        self.logger.info(f"Starting Pararius monitor for {self.search_url}") 
         self.logger.info(f"Checking every {self.check_interval} seconds")
         
         # Do an initial check right away
