@@ -153,7 +153,7 @@ class ParariusMonitor:
                 return False
             
             client = Client(self.twilio_account_sid, self.twilio_auth_token)
-            message = f"New listing found!\n\n{listing['title']}\n{listing['price']}\n{listing['address']}\n\nView it here: {listing['url']}"
+            message = f"N listing\n\n{listing['title']}\n{listing['price']}\n\L: {listing['url']}"
             
             self.logger.info(f"Sending notification to {self.notification_number} for listing: {listing['title']}")
             
