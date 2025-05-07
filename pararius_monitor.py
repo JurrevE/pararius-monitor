@@ -166,12 +166,9 @@ class ParariusMonitor:
 
             client = Client(self.twilio_account_sid, self.twilio_auth_token)
             message_body = (
-                f"🆕 P!\n\n"
-                f"🏡 {listing['title']}\n"
-                f"📍 {listing['address']}\n"
-                f"💰 {listing['price']}\n\n"
-                f"🔗 {listing['url']}\n"
-                f"(S: {listing.get('source_url', 'N/A')})"
+                f"{listing['title']}\n"
+                f"{listing['price']}\n\n"
+                f"{listing['url']}\n"
             )
             self.logger.info(f"Sending notification for listing: {listing['title']} (from {listing.get('source_url', 'N/A')})")
             message_result = client.messages.create(

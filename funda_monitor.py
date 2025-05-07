@@ -283,11 +283,9 @@ class FundaMonitor:
 
             client = Client(self.twilio_account_sid, self.twilio_auth_token)
             message_body = (
-                f"🏠 F!\n\n"
-                f"📌 {listing['title']}\n"
-                f"📍 {listing['address']}\n"
-                f"💰 {listing['price']}\n\n"
-                f"🔗 {listing['url']}"
+                f"{listing['title']}\n"
+                f"{listing['price']}\n\n"
+                f"{listing['url']}"
             )
             # Truncate message if too long for SMS (Twilio handles multi-part, but good practice)
             if len(message_body) > 1600: # Max length for concatenated SMS
