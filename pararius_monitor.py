@@ -244,18 +244,3 @@ class ParariusMonitor:
                 self.logger.info(f"Pararius: Sleeping for {error_sleep:.0f} seconds after error before retrying.")
                 time.sleep(error_sleep)
 
-# Example usage for standalone testing:
-# if __name__ == "__main__":
-#     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-#     load_dotenv() # Load .env for standalone test
-# 
-#     test_urls = [os.getenv("PARARIUS_SEARCH_URL_1"), os.getenv("PARARIUS_SEARCH_URL_2")]
-#     test_urls = [url for url in test_urls if url] # Filter out None values
-# 
-#     if not test_urls:
-#         print("Please set PARARIUS_SEARCH_URL_1 (and optionally _2) in .env for testing.")
-#     else:
-#         monitor = ParariusMonitor(test_urls, check_interval=60) # Short interval for testing
-#         monitor.run()
-
-#krijg kanker
