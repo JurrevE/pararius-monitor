@@ -374,7 +374,7 @@ if __name__ == "__main__":
     check_interval_seconds = int(os.environ.get("FUNDA_CHECK_INTERVAL", "900"))
     data_filename = os.environ.get("FUNDA_DATA_FILE", "seen_funda_listings_v2.json") # Changed default to avoid overwrite
 
-    # Check for Twilio variables (warnings only)
+    # Check for Twilio variables (warnings only!)
     if not os.environ.get("TWILIO_ACCOUNT_SID"): logger_main.warning("TWILIO_ACCOUNT_SID not set.")
     if not os.environ.get("TWILIO_AUTH_TOKEN"): logger_main.warning("TWILIO_AUTH_TOKEN not set.")
     if not os.environ.get("TWILIO_FROM_NUMBER"): logger_main.warning("TWILIO_FROM_NUMBER not set.")
